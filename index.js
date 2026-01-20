@@ -20,10 +20,10 @@ var path = require('path');
 
 // Database Connection
 var db = mysql.createConnection({
-    host: "localhost",
-    user: "uc894rc5pkrnplqh",
-    password: "cTTT3NM4RLFot2KqPAte", // User can update this
-    database: "bi8q9f8n9jublz1v2q1y"
+    host: "bo1nnrbkbqt3q2avyw7y-mysql.services.clever-cloud.com",
+    user: "ulm5m4kxjal3m71u",
+    password: "UGnZxOdjYourB2oy3QOO", // User can update this
+    database: "bo1nnrbkbqt3q2avyw7y"
 });
 
 db.connect(function(err) {
