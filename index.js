@@ -21,9 +21,9 @@ var path = require('path');
 // Database Connection
 var db = mysql.createConnection({
     host: "localhost",
-    user: "root",
-    password: "", // User can update this
-    database: "dynamic_portfolio"
+    user: "uc894rc5pkrnplqh",
+    password: "cTTT3NM4RLFot2KqPAte", // User can update this
+    database: "bi8q9f8n9jublz1v2q1y"
 });
 
 db.connect(function(err) {
