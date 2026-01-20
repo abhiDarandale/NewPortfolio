@@ -1,0 +1,240 @@
+<%-include('header.ejs')-%>
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 text-center">
+                    <img src="<%= hero.image_path %>" alt="Profile" class="hero-img ">
+                </div>
+                <div class="col-lg-6 ">
+                    <h1 class="hero-title">
+                        <%= hero.title %>
+                    </h1>
+                    <h2 class="hero-subtitle">
+                        <%= hero.subtitle %>
+                    </h2>
+                    <a href="#contact" class="btn btn-light btn-lg">Hire Me</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section portfolio-section">
+        <div class="container">
+            <h2 class="section-title ">About Me</h2>
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <p class="about-text">
+                        <%= about.description_1 %>
+                    </p>
+                    <p class="about-text">
+                        <%= about.description_2 %>
+                    </p>
+                    <p class="about-text">
+                        <%= about.description_3 %>
+                    </p>
+                    <% if(about.cv_path) { %>
+                        <a href="<%= about.cv_path %>" class="btn btn-primary mt-4" download>Download CV</a>
+                        <% } %>
+                </div>
+                <div class="col-lg-6 text-center ">
+                    <img src="<%= about.image_path %>" alt="Abhi Darandale" class="w-75 rounded-circle">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col text-center">
+                    <h2 class="section-title">Skills</h2>
+                    <p class="text-muted">Technologies that I use.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <% skills.forEach(function(skill) { %>
+                    <div class="col-md-3 col-6">
+                        <div class="skill-card text-center p-3">
+                            <i class="<%= skill.icon_class %> fs-1 text-primary mb-2"></i>
+                            <h5>
+                                <%= skill.name %>
+                            </h5>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certification Section -->
+    <section id="certification" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title ">Certifications</h2>
+            <div class="row">
+                <% certifications.forEach(function(cert) { %>
+                    <div class="col-lg-3 col-md-6 col-sm-6 mb-4">
+                        <div class="cert-card animate-card">
+                            <div class="cert-img">
+                                <img src="<%= cert.image_path %>" alt="<%= cert.title %>">
+                            </div>
+                            <div class="cert-content">
+                                <h3 class="cert-title">
+                                    <%= cert.title %>
+                                </h3>
+                                <p class="cert-org">
+                                    <%= cert.organization %>
+                                </p>
+                                <span class="cert-date">Issued: <%= cert.issue_date %></span>
+                                <button class="btn btn-outline-primary btn-sm mt-3" data-bs-toggle="modal"
+                                    data-bs-target="#certificateModal" data-bs-image="<%= cert.image_path %>"
+                                    data-bs-title="<%= cert.title %>">View Certificate</button>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section portfolio-section">
+        <div class="container">
+            <h2 class="section-title ">My Services</h2>
+            <div class="row">
+                <% services.forEach(function(service) { %>
+                    <div class="col-md-4 mb-4">
+                        <div class="service-card ">
+                            <div class="service-icon">
+                                <i class="<%= service.icon_class %>"></i>
+                            </div>
+                            <h3>
+                                <%= service.title %>
+                            </h3>
+                            <p>
+                                <%= service.description %>
+                            </p>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title ">My Projects</h2>
+            <div class="row g-4">
+                <% projects.forEach(function(project) { %>
+                    <div class="col-md-4 mb-4">
+                        <div class="project-card">
+                            <img src="<%= project.image_path %>" class="project-img" alt="<%= project.title %>">
+                            <div class="card-body p-4">
+                                <h5 class="card-title mb-2">
+                                    <%= project.title %>
+                                </h5>
+                                <p class="card-text">
+                                    <%= project.description %>
+                                </p>
+                                <a href="javascript:void(0)" class="btn btn-primary" data-bs-toggle="modal"
+                                    data-bs-target="#projectModal" data-bs-image="<%= project.image_path %>"
+                                    data-bs-title="<%= project.title %>"
+                                    data-bs-description="<%= project.full_description %>">View
+                                    Project</a>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section portfolio-section">
+        <div class="container">
+            <h2 class="section-title ">Education & Experience</h2>
+            <div class="row">
+                <div class="col-lg-6 ">
+                    <h3 class="mb-4">Education</h3>
+                    <div class="timeline">
+                        <% education.forEach(function(edu) { %>
+                            <div class="timeline-item">
+                                <h4>
+                                    <%= edu.degree %>
+                                </h4>
+                                <h5>
+                                    <%= edu.institute %>
+                                </h5>
+                                <p class="text-muted">
+                                    <%= edu.year_range %>
+                                </p>
+                                <p class="text-muted">CGPA: <%= edu.cgpa %>
+                                </p>
+                            </div>
+                            <% }); %>
+                    </div>
+                </div>
+                <div class="col-lg-6 ">
+                    <h3 class="mb-4">Experience</h3>
+                    <div class="timeline">
+                        <% experience.forEach(function(exp) { %>
+                            <div class="timeline-item">
+                                <h4>
+                                    <%= exp.role %>
+                                </h4>
+                                <h5>
+                                    <%= exp.company %>
+                                </h5>
+                                <p class="text-muted">
+                                    <%= exp.duration %>
+                                </p>
+                                <p>
+                                    <%= exp.description %>
+                                </p>
+                            </div>
+                            <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="portfolio-section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="contact-form ">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" placeholder="Your Name" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="email" class="form-control" placeholder="Your Email" required>
+                                </div>
+                            </div>
+                            <textarea class="form-control" rows="2" placeholder="Your Message" required></textarea>
+                            <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        </form>
+                        <div class="social-links text-center">
+                            <a href="https://wa.me/918788303325" class="social-icon" target="_blank"><i
+                                    class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/abhi_darandale_0011?igsh=YzBsenhzeXh5enJt"
+                                class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/in/abhishek-darandale-bb3b62350?igsh=MXcwa3hwa3RtbGhscw=="
+                                class="social-icon" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/AbhiDarandale" class="social-icon" target="_blank"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%-include('footer.ejs')-%>

@@ -1,0 +1,456 @@
+ body {
+     font-family: 'Poppins', sans-serif;
+     scroll-behavior: smooth;
+     color: #333;
+ }
+
+ /* Navbar */
+ .navbar {
+     background-color: #2c3e50;
+     padding: 15px 0;
+     transition: all 0.3s ease;
+ }
+
+ .navbar-brand {
+     font-weight: 700;
+     color: #ecf0f1 !important;
+     font-size: 1.8rem;
+ }
+
+ .nav-link {
+     color: #ecf0f1 !important;
+     font-weight: 500;
+     margin: 0 10px;
+     transition: all 0.3s ease;
+ }
+
+ .nav-link:hover {
+     color: #3498db !important;
+ }
+
+ /* Hero Section */
+ .hero-section {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     padding: 150px 0 100px;
+     color: white;
+ }
+
+ .hero-img {
+     width: 300px;
+     height: 300px;
+     border-radius: 50%;
+     object-fit: cover;
+     border: 5px solid rgba(255, 255, 255, 0.3);
+ }
+
+ .hero-title {
+     font-size: 3.5rem;
+     font-weight: 700;
+     margin-bottom: 20px;
+ }
+
+ .hero-subtitle {
+     font-size: 1.5rem;
+     margin-bottom: 30px;
+ }
+
+ /* Section Common Styles */
+ .portfolio-section {
+     padding: 80px 0;
+ }
+
+ .section-title {
+     text-align: center;
+     margin-bottom: 60px;
+     font-weight: 700;
+     position: relative;
+     padding-bottom: 15px;
+ }
+
+ .section-title::after {
+     content: '';
+     position: absolute;
+     bottom: 0;
+     left: 50%;
+     transform: translateX(-50%);
+     width: 80px;
+     height: 4px;
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     border-radius: 2px;
+ }
+
+ /* About Section */
+ .about-section {
+     background-color: #f8f9fa;
+ }
+
+ .about-text {
+     font-size: 1.1rem;
+     line-height: 1.8;
+ }
+
+ /* Skills Section */
+ /* Skills */
+ .skill-card {
+     background: #fff;
+     border-radius: 10px;
+     box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+     transition: transform 0.2s ease, box-shadow 0.2s ease;
+     min-height: 140px;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+ }
+
+ .skill-card i {
+     color: #0d6efd;
+ }
+
+ .skill-card:hover {
+     transform: translateY(-4px);
+     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+ }
+
+ /* Services Section */
+ .services-section {
+     background-color: #f8f9fa;
+ }
+
+ .service-card {
+     padding: 30px;
+     border-radius: 10px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     transition: all 0.3s ease;
+     background: white;
+     height: 100%;
+ }
+
+ .service-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ .service-icon {
+     font-size: 2.5rem;
+     margin-bottom: 20px;
+     color: #667eea;
+ }
+
+ /* Projects Section */
+ .project-card {
+     border-radius: 10px;
+     overflow: hidden;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     margin-bottom: 30px;
+     transition: all 0.3s ease;
+     background: white;
+     height: 100%;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .project-card .card-body {
+     flex: 1 1 auto;
+     display: flex;
+     flex-direction: column;
+ }
+
+ .project-card .card-body .btn {
+     margin-top: auto;
+     align-self: flex-start;
+ }
+
+ .project-card:hover {
+     transform: translateY(-5px);
+     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+ }
+
+ .project-img {
+     height: 200px;
+     object-fit: cover;
+     width: 100%;
+ }
+
+ /* Education Section */
+ .education-section {
+     background-color: #f8f9fa;
+ }
+
+ .timeline {
+     position: relative;
+     padding-left: 3rem;
+ }
+
+ .timeline::before {
+     content: '';
+     position: absolute;
+     left: 7px;
+     top: 0;
+     height: 100%;
+     width: 2px;
+     background: #667eea;
+ }
+
+ .timeline-item {
+     position: relative;
+     margin-bottom: 2.5rem;
+ }
+
+ .timeline-item::before {
+     content: '';
+     position: absolute;
+     left: -3.2rem;
+     top: 0;
+     width: 16px;
+     height: 16px;
+     border-radius: 50%;
+     background: #667eea;
+     border: 3px solid white;
+ }
+
+ /* Contact Section */
+ .contact-form {
+     padding: 30px;
+     border-radius: 10px;
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+     background: white;
+ }
+
+ .form-control {
+     padding: 15px;
+     margin-bottom: 20px;
+     border: 1px solid #ddd;
+     border-radius: 5px;
+ }
+
+ .btn-primary {
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     border: none;
+     padding: 12px 30px;
+     font-weight: 500;
+     transition: all 0.3s ease;
+ }
+
+ .btn-primary:hover {
+     transform: translateY(-3px);
+     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+ }
+
+ .social-links {
+     margin-top: 30px;
+ }
+
+ .social-icon {
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     text-decoration: none;
+     width: 50px;
+     height: 50px;
+     border-radius: 50%;
+     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+     color: white;
+     margin: 0 10px;
+     font-size: 1.5rem;
+     transition: all 0.3s ease;
+ }
+
+ .social-icon:hover {
+     transform: translateY(-5px);
+ }
+
+ /* Footer */
+ .footer-section {
+     background-color: #2c3e50;
+     color: white;
+     padding: 30px 0;
+     text-align: center;
+ }
+
+ /* Certification Section */
+ .cert-card {
+     background: white;
+     border-radius: 12px;
+     overflow: hidden;
+     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+     transition: all 0.4s ease;
+     margin-bottom: 30px;
+     height: 100%;
+ }
+
+ .cert-card:hover {
+     transform: translateY(-10px);
+     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+ }
+
+ .cert-img {
+     position: relative;
+     overflow: hidden;
+     height: 200px;
+ }
+
+ .cert-img img {
+     width: 100%;
+     height: 100%;
+     object-fit: cover;
+     transition: transform 0.5s ease;
+ }
+
+ .cert-card:hover .cert-img img {
+     transform: scale(1.05);
+ }
+
+ .cert-overlay {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(to bottom, rgba(78, 84, 200, 0.2), rgba(143, 148, 251, 0.7));
+     opacity: 0;
+     transition: opacity 0.4s ease;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .cert-card:hover .cert-overlay {
+     opacity: 1;
+ }
+
+ .view-btn {
+     background: white;
+     color: #4e54c8;
+     border: none;
+     padding: 10px 20px;
+     border-radius: 50px;
+     font-weight: 600;
+     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+     transform: translateY(20px);
+     opacity: 0;
+     transition: all 0.3s ease;
+ }
+
+ .cert-card:hover .view-btn {
+     opacity: 1;
+     transform: translateY(0);
+ }
+
+ .cert-content {
+     padding: 20px;
+ }
+
+ .cert-title {
+     font-size: 18px;
+     font-weight: 700;
+     margin-bottom: 10px;
+     color: #2c3e50;
+ }
+
+ .cert-org {
+     color: #7f8c8d;
+     font-size: 14px;
+     margin-bottom: 15px;
+ }
+
+ .cert-date {
+     display: block;
+     color: #4e54c8;
+     font-size: 13px;
+     font-weight: 600;
+ }
+
+ /* Animation for cards */
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(30px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ .animate-card {
+     animation: fadeInUp 0.6s ease forwards;
+     opacity: 0;
+ }
+
+ /* Responsive Adjustments */
+ @media (max-width: 1200px) {
+     .hero-title {
+         font-size: 3rem;
+     }
+ }
+
+ @media (max-width: 992px) {
+     .hero-section {
+         padding: 120px 0 80px;
+     }
+
+     .hero-img {
+         width: 250px;
+         height: 250px;
+         margin-bottom: 30px;
+     }
+
+     .cert-card {
+         margin-bottom: 25px;
+     }
+ }
+
+ @media (max-width: 768px) {
+     .hero-title {
+         font-size: 2.5rem;
+     }
+
+     .hero-subtitle {
+         font-size: 1.2rem;
+     }
+
+     .section-title {
+         font-size: 1.8rem;
+         margin-bottom: 40px;
+     }
+
+     .portfolio-section {
+         padding: 60px 0;
+     }
+
+     .cert-img {
+         height: 180px;
+     }
+
+     .service-card,
+     .project-card,
+     .cert-card {
+         margin-bottom: 20px;
+     }
+ }
+
+ @media (max-width: 576px) {
+     .hero-title {
+         font-size: 2rem;
+     }
+
+     .section-title {
+         font-size: 1.6rem;
+     }
+
+     .cert-content {
+         padding: 15px;
+     }
+
+     .cert-title {
+         font-size: 16px;
+     }
+
+     .social-icon {
+         width: 40px;
+         height: 40px;
+         font-size: 1.2rem;
+         margin: 0 5px;
+     }
+ }
